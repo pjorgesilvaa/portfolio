@@ -14,6 +14,7 @@ export default {
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
+          hover: "hsl(var(--card-hover))",
           border: "hsl(var(--card-border))",
           foreground: {
             DEFAULT: "hsl(var(--card-foreground))",
@@ -59,6 +60,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      screens: {
+        "3xl": "2000px",
       },
     },
   },
