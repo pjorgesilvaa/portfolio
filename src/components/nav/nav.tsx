@@ -6,6 +6,5 @@ export default function Nav() {
     <Link href="#tech" className="py-4 transition-colors hover:text-card-foreground-hover">Technologies</Link>
     <Link href="#experience" className="py-4 transition-colors hover:text-card-foreground-hover">Experience</Link>
     <Link href="#projects" className="py-4 transition-colors hover:text-card-foreground-hover">Projects</Link>
-    <Link href="#contact" className="py-4 transition-colors hover:text-card-foreground-hover">Contact</Link>
   </div>;
 }
