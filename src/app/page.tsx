@@ -1,4 +1,4 @@
-import Nav from "@/components/nav/nav";
+/* import Nav from "@/components/nav/nav"; */
 import { Button } from "@/components/ui/button";
 import { ChevronRight, DownloadIcon } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,12 +13,13 @@ import JavaScriptIcon from "@/components/ui/icons/javascriptIcon";
 import CSharpIcon from "@/components/ui/icons/csharpIcon";
 import AzureDevOpsIcon from "@/components/ui/icons/azureDevOpsIcon";
 import ProjectCard from "@/components/projectCard/projectCard";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <Nav />
-      <main className="relative w-11/12 md:w-4/6 3xl:w-1/2">
+      {/* <Nav /> */}
+      <main className="relative w-10/12 md:w-4/6 3xl:w-1/2">
         <section id="home" className="relative h-screen w-full">
           <div className="w-full h-full flex flex-col justify-center items-center">
             <p className="uppercase font-bold text-card-foreground-hover">
@@ -32,22 +33,38 @@ export default function Home() {
               <span className="text-primary">React & C# </span>
               <span>Specialist</span>
             </div>
-            <div className="flex justify-center flex-col md:flex-row items-center gap-4 mt-8">
-              <Button variant="secondary" className="capitalize font-bold">
-                See my experience
-                <ChevronRight />
+            <div className="flex justify-center flex-row items-center gap-2 md:gap-4 mt-8">
+              <Button
+                variant="secondary"
+                className="capitalize font-bold"
+                asChild
+              >
+                <Link href="#experience">
+                  My Experience <ChevronRight />
+                </Link>
               </Button>
-              <Button variant="ghost" className="capitalize font-bold">
-                <DownloadIcon />
-                Download Resume
+              <Button variant="ghost" className="capitalize font-bold" asChild>
+                <Link href="/Paulo Silva CV 2025.pdf" target="_blank">
+                  <DownloadIcon /> Download Resumé
+                </Link>
               </Button>
             </div>
             <div className="flex justify-center items-center gap-1 mt-8">
               <Button variant="ghost" size="icon">
-                <FontAwesomeIcon icon={faInstagram} className="!h-6 !w-6" />
+                <Link
+                  href="https://www.instagram.com/psilva171/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="!h-6 !w-6" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <FontAwesomeIcon icon={faLinkedin} className="!h-6 !w-6" />
+                <Link
+                  href="https://www.linkedin.com/in/paulo-silva171/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="!h-6 !w-6" />
+                </Link>
               </Button>
               {/* <Button variant="link">
                 <SiLinkedIn />
@@ -62,7 +79,7 @@ export default function Home() {
             which have allowed me to develop efficient, scalable, and
             high-quality solutions.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-y-4 gap-x-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-4 gap-x-6 mt-12">
             {[
               {
                 color: "hsl(192,95%,68%)",
@@ -125,7 +142,10 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section id="experience" className="relative w-full mt-12 md:mt-24 pt-8">
+        <section
+          id="experience"
+          className="relative w-full mt-12 md:mt-24 pt-8"
+        >
           <h1 className="text-4xl md:text-6xl font-bold">Experience</h1>
           <p className="mt-4 text-card-foreground-hover">
             Below is a timeline of my work, highlighting the companies and
@@ -157,8 +177,8 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="mt-8">
-            <h2 className="text-xl md:text-3xl font-bold">Noesis</h2>
+          <div className="mt-4">
+            {/* <h2 className="text-xl md:text-3xl font-bold">Noesis</h2> */}
             <h3 className="font-bold text-card-foreground-hover">
               Junior Full Stack Developer
             </h3>
@@ -178,7 +198,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="mt-8">
+          <div className="mt-12">
             <h2 className="text-xl md:text-3xl font-bold">GECAD</h2>
             <h3 className="font-bold text-card-foreground-hover">
               Frontend Developer Intern
@@ -209,24 +229,33 @@ export default function Home() {
             software development.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 mt-12">
-            <ProjectCard title="Project 1" tags={["React", "Typescript"]} />
-            <ProjectCard title="Project 2" tags={["React", "Typescript"]} />
-            <ProjectCard title="Project 3" tags={["React", "Typescript"]} />
-            <ProjectCard title="Project 4" tags={["React", "Typescript"]} />
+            <ProjectCard title="A project coming soon..." tags={["Soon"]} />
+            <ProjectCard title="A project coming soon..." tags={["Soon"]} />
+            <ProjectCard title="A project coming soon..." tags={["Soon"]} />
+            <ProjectCard title="A project coming soon..." tags={["Soon"]} />
           </div>
         </section>
       </main>
       <footer className="relative w-full border-card-border border-t-4 mt-24 pt-8 pb-8 flex flex-col items-center">
         <div className="flex gap-2">
           <Button variant="ghost" size="icon">
-            <FontAwesomeIcon icon={faInstagram} className="!h-7 !w-7" />
+            <Link href="https://www.instagram.com/psilva171/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram} className="!h-6 !w-6" />
+            </Link>
           </Button>
           <Button variant="ghost" size="icon">
-            <FontAwesomeIcon icon={faLinkedin} className="!h-7 !w-7" />
+            <Link
+              href="https://www.linkedin.com/in/paulo-silva171/"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="!h-6 !w-6" />
+            </Link>
           </Button>
         </div>
         <span className="mt-4 font-bold">Made with ❤️‍🔥 by Paulo Silva</span>
-        <span className="text-card-foreground-hover">© 2024 | All rights reserved</span>
+        <span className="text-card-foreground-hover">
+          © 2024 | All rights reserved
+        </span>
       </footer>
     </div>
   );
