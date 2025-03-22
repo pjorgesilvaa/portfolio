@@ -1,6 +1,6 @@
 # Paulo Silva - Portfolio
 
-🚀 **Welcome to my portfolio repository!** This project showcases my skills, experience, and projects as a full-stack developer specializing in **React, .NET, and SQL Server**.
+🚀 **Welcome to my portfolio repository!** This project showcases my skills, experience, and projects as a fullstack developer specializing in **React, .NET, and SQL Server**.
 
 ## 🌍 Live Website
 🔗 [Check it here!](https://pjorgesilvaa.github.io/portfolio/)

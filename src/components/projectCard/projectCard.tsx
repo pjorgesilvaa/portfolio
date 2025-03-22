@@ -2,21 +2,23 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectCard(props: {
   title: string;
   tags: string[];
   image?: string;
+  link?: string;
 }) {
-  const { title, tags, image } = props;
+  const { title, tags, image, link } = props;
   return (
     <Card className="p-4">
       {image ? (
-        <div className="aspect-video rounded-md">
-          <Image src={image} alt={title} fill />
+        <div className="relative w-full aspect-video rounded-md overflow-hidden">
+          <Image src={image} alt={title} layout="fill" objectFit="cover" />
         </div>
       ) : (
-        <div className="bg-black aspect-video rounded-md" />
+        <div className="bg-black w-full aspect-video rounded-md" />
       )}
       <h1 className="text-xl font-bold mt-4">{title}</h1>
       <div className="flex justify-between mt-4">
@@ -31,7 +33,13 @@ export default function ProjectCard(props: {
           ))}
         </div>
         <Button variant="default" className="capitalize font-bold">
-          <ChevronRight />
+          {link ? (
+            <Link href={link} target="_blank">
+              <ChevronRight />
+            </Link>
+          ) : (
+            <ChevronRight />
+          )}
         </Button>
       </div>
     </Card>
