@@ -229,7 +229,7 @@ export default function Home() {
             software development.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 mt-12">
-            <ProjectCard title="Paulo Silva - 2025 Portfolio" tags={["Next.js", "TypeScript", "Tailwind"]} image="/portfolio-banner.png" link="https://github.com/pjorgesilvaa/portfolio" />
+            <ProjectCard title="Paulo Silva - 2025 Portfolio" tags={["Next.js", "TypeScript", "Tailwind"]} image="portfolio-banner.png" link="https://github.com/pjorgesilvaa/portfolio" />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
