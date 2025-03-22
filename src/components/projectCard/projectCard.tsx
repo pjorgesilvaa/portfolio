@@ -16,7 +16,7 @@ export default function ProjectCard(props: {
     <Card className="p-4">
       {image ? (
         <div className="relative w-full aspect-video rounded-md overflow-hidden">
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH ? `/${process.env.NEXT_PUBLIC_BASE_PATH}/${image}` : `/${image}`} alt={title} layout="fill" objectFit="cover" />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH != "" ? `/${process.env.NEXT_PUBLIC_BASE_PATH}/${image}` : `/${image}`} alt={title} layout="fill" objectFit="cover" />
         </div>
       ) : (
         <div className="bg-black w-full aspect-video rounded-md" />
