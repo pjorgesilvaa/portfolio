@@ -54,6 +54,7 @@ export default function Home() {
                 <Link
                   href="https://www.instagram.com/psilva171/"
                   target="_blank"
+                  className="!h-full !w-full flex justify-center items-center"
                 >
                   <FontAwesomeIcon icon={faInstagram} className="!h-6 !w-6" />
                 </Link>
@@ -62,6 +63,7 @@ export default function Home() {
                 <Link
                   href="https://www.linkedin.com/in/paulo-silva171/"
                   target="_blank"
+                  className="!h-full !w-full flex justify-center items-center"
                 >
                   <FontAwesomeIcon icon={faLinkedin} className="!h-6 !w-6" />
                 </Link>
@@ -229,7 +231,12 @@ export default function Home() {
             software development.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 mt-12">
-            <ProjectCard title="Paulo Silva - 2025 Portfolio" tags={["Next.js", "TypeScript", "Tailwind"]} image="portfolio-banner.png" link="https://github.com/pjorgesilvaa/portfolio" />
+            <ProjectCard
+              title="Paulo Silva - 2025 Portfolio"
+              tags={["Next.js", "TypeScript", "Tailwind"]}
+              image="portfolio-banner.png"
+              link="https://github.com/pjorgesilvaa/portfolio"
+            />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
             <ProjectCard title="A project coming soon..." tags={["Soon"]} />
@@ -239,7 +246,11 @@ export default function Home() {
       <footer className="relative w-full border-card-border border-t-4 mt-24 pt-8 pb-8 flex flex-col items-center">
         <div className="flex gap-2">
           <Button variant="ghost" size="icon">
-            <Link href="https://www.instagram.com/psilva171/" target="_blank">
+            <Link
+              href="https://www.instagram.com/psilva171/"
+              target="_blank"
+              className="!h-full !w-full flex justify-center items-center"
+            >
               <FontAwesomeIcon icon={faInstagram} className="!h-6 !w-6" />
             </Link>
           </Button>
@@ -247,6 +258,7 @@ export default function Home() {
             <Link
               href="https://www.linkedin.com/in/paulo-silva171/"
               target="_blank"
+              className="!h-full !w-full flex justify-center items-center"
             >
               <FontAwesomeIcon icon={faLinkedin} className="!h-6 !w-6" />
             </Link>

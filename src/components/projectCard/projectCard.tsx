@@ -16,7 +16,7 @@ export default function ProjectCard(props: {
     <Card className="p-4">
       {image ? (
         <div className="relative w-full aspect-video rounded-md overflow-hidden">
-          <Image src={process.env.NEXT_PUBLIC_BASE_PATH != "" ? `/${process.env.NEXT_PUBLIC_BASE_PATH}/${image}` : `/${image}`} alt={title} layout="fill" objectFit="cover" />
+          <Image src={process.env.NEXT_PUBLIC_BASE_PATH ? `/${process.env.NEXT_PUBLIC_BASE_PATH}/${image}` : `/${image}`} alt={title} layout="fill" objectFit="cover" />
         </div>
       ) : (
         <div className="bg-black w-full aspect-video rounded-md" />
@@ -33,13 +33,15 @@ export default function ProjectCard(props: {
             </div>
           ))}
         </div>
-        <Button variant="default" className="capitalize font-bold">
+        <Button variant="default" className="capitalize font-bold" asChild>
           {link ? (
-            <Link href={link} target="_blank">
+            <Link href={link} target="_blank" className="!h-10 !w-14 flex justify-center items-center">
               <ChevronRight />
             </Link>
           ) : (
-            <ChevronRight />
+            <div className="!h-10 !w-14 flex justify-center items-center">
+              <ChevronRight/>
+            </div>
           )}
         </Button>
       </div>
