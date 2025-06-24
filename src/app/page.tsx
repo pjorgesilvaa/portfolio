@@ -156,13 +156,27 @@ export default function Home() {
             tackled along the way.
           </p>
           <div className="mt-12">
+            <h2 className="text-xl md:text-3xl font-bold">Axians</h2>
+            <h3 className="font-bold text-card-foreground-hover">
+              Senior Full Stack Developer
+            </h3>
+            <p>
+              Jun 2025 - <span className="text-primary">Now</span>
+            </p>
+            <ul className="pl-12 mt-2 list-disc text-card-foreground-hover">
+              <li>
+                Developing a full stack portal using .NET, Entity Framework
+                Core, PostgreSQL and React.
+              </li>
+              <li>Mentoring developers on team.</li>
+            </ul>
+          </div>
+          <div className="mt-12">
             <h2 className="text-xl md:text-3xl font-bold">Noesis</h2>
             <h3 className="font-bold text-card-foreground-hover">
               Full Stack Developer
             </h3>
-            <p>
-              March 2023 - <span className="text-primary">Now</span>
-            </p>
+            <p>March 2023 - Jun 2025</p>
             <ul className="pl-12 mt-2 list-disc text-card-foreground-hover">
               <li>
                 Developed and maintained 5 solutions with React and 7 with .NET
